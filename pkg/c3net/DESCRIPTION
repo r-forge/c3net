@@ -1,0 +1,10 @@
+Package: c3net
+Title: C3NET
+Version: 1.0.0
+Date: 2010-10
+Author: Gokmen Altay, Frank Emmert-Streib
+Description: This package allows inferring regulatory networks from expression data using C3NET.
+Maintainer: Gokmen Altay <altayscience@gmail.com>
+License: LGPL-3
+Depends: igraph 
+Packaged: 2010-10-11 15:21:41 UTC; altay01
