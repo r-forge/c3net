@@ -8,8 +8,6 @@ data(truenet)
 #copula transforming the data set
 expdata <- copula(expdata)
 
-#copula transforming the data set
-expdata <- copula(expdata)
 
 #set a significance threshold value
 alpha <- 0.001
