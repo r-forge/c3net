@@ -1,7 +1,8 @@
 #This file belongs to
-#c3net: C3NET, <http://www.bioconductor.org/packages/release/Software.html>
+#c3net: C3NET, <https://r-forge.r-project.org/projects/c3net/>
 #This R package allows inferring regulatory networks from expression data using C3NET.
-## Copyright (C) August 2009 Gokmen Altay <altayscience@gmail.com>
+#The inferred network consists of only direct physical interactions.
+## Copyright (C) August 2010 Gokmen Altay <altayscience@gmail.com>
 ## This program is free software; you can redistribute it and/or
 ## modify it under the terms of the GNU LESSER GENERAL PUBLIC LICENSE
 ## as published by the Free Software Foundation; either version 3
@@ -11,9 +12,11 @@
 ## You can get a copy of the GNU LESSER GENERAL PUBLIC LICENSE
 ## from
 ## http://www.r-project.org/Licenses/LGPL-3
+## See the licence information for the dependent package from
+## igraph package itself.
 
 
-c3net <- function(dataset, alpha=0.01, methodstep1="cutoff", cutoffMI= 0, fdrmethod="BH", itnum=5, network=FALSE)
+c3net <- function(dataset, alpha=0.01, methodstep1="cutoff", cutoffMI= 0, MTCmethod="BH", itnum=5, network=FALSE)
 {
       net <- NULL
       dataset <- copula(expdata)
@@ -26,8 +29,8 @@ c3net <- function(dataset, alpha=0.01, methodstep1="cutoff", cutoffMI= 0, fdrmet
 	mim[mim < Ic] <-0 
 	net <- c3(mim)
 	}
-      else if( methodstep1=="fdr") {
-	res <- sigtestfdr(dataset, alpha, itnum, methodsig=fdrmethod)
+      else if( methodstep1=="MTC") {
+	res <- sigtestMTC(dataset, alpha, itnum, methodsig=MTCmethod)
         net <- c3(res$Inew) 
 	}	 
       else {
