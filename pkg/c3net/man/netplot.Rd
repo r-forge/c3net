@@ -12,18 +12,20 @@
   \code{netplot} returns an undirected network. 
 }
 \description{
-  \code{netplot} takes the inferred mutual information matrix and plots network wrt nonzero elements of the matrix. - see details.
+  \code{netplot} takes the inferred mutual information matrix and plots a network wrt nonzero elements of the matrix - see details.
 }
 
 \details{
-      A labelled undirected network is plotted wrt the row (column) names of the input matrix. When plotted, select "Layout" and then "Fruchterman-Reingold" and "OK" to get better view. To remove labels, select "View" and deselect "Labels". To change the colors or size of nodes and edges, from "Select", click on "all edges" or "vertices" and on the network right click on nodes and change color or size.     
+      A labelled undirected network is plotted wrt the row (column) names of the input matrix. When plotted, select "Layout" and then "Fruchterman-Reingold" and "OK" to get a better view. To remove labels, select "View" and deselect "Labels". To change the colors or size of nodes and edges, from "Select", click on "all edges" or "vertices" and on the network right click on nodes and change color or size.     
  }
 
 \references{
-      G. Altay, F. Emmert-Streib, "Inferring the conservative causal core of gene regulatory networks", BMC Systems Biology, 4:132, 2010.    
+      G. Altay, F. Emmert-Streib, "Inferring the conservative causal core of gene regulatory networks", BMC Systems Biology (2010) 4:132.    
+
+      CSARDI G, NEPUSZ T.: igraph-package for R, 2008
 }
 
-\seealso{\code{\link{makemim}}, \code{\link{copula}}, \code{\link{c3}}, \code{\link{sigtestp}}, \code{\link{sigtestfdr}} }
+\seealso{\code{\link{makemim}}, \code{\link{copula}}, \code{\link{c3}}, \code{\link{sigtestp}}, \code{\link{sigtestMTC}} }
 
 \examples{
 data(expdata)
@@ -34,7 +36,7 @@ expdata <- copula(expdata)
 
 mim <- makemim(expdata)
 
-Ic <- mean(mim[upper.tri(mim)])  #Example cut-off for the first step of C3NET
+Ic <- 2  #Example cut-off for the first step of C3NET
 
 mim[mim < Ic] <-0  #nonsignificant values eliminated wrt C3NET step 1.
 

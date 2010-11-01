@@ -18,10 +18,10 @@
 }
 
 \references{
-      G. Altay, F. Emmert-Streib, "Inferring the conservative causal core of gene regulatory networks", BMC Systems Biology,  4:132, 2010.    
+      G. Altay, F. Emmert-Streib, "Inferring the conservative causal core of gene regulatory networks", BMC Systems Biology, (2010) 4:132.    
 }
 
-\seealso{\code{\link{makemim}}, \code{\link{copula}}, \code{\link{c3}}, \code{\link{sigtestp}}, \code{\link{sigtestfdr}} }
+\seealso{\code{\link{makemim}}, \code{\link{copula}}, \code{\link{c3}}, \code{\link{c3net}}, \code{\link{c3}}, \code{\link{makemim}}, \code{\link{copula}}, \code{\link{sigtestp}}, \code{\link{sigtestMTC}} }
 
 \examples{
 data(expdata)
@@ -32,7 +32,7 @@ expdata <- copula(expdata)
 
 mim <- makemim(expdata)
 
-Ic <- mean(mim[upper.tri(mim)])  #Example cut-off for the first step of C3NET
+Ic <- 2  #Example cut-off value for mutual information for the first step of C3NET
 
 mim[mim < Ic] <-0  #nonsignificant values eliminated wrt C3NET step 1.
 
