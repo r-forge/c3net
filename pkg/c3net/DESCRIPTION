@@ -3,7 +3,7 @@ Title: C3NET
 Version: 1.1.0
 Date: 2010-10
 Author: Gokmen Altay, Frank Emmert-Streib
-Description: This package allows inferring regulatory networks with direct physical interactions from expression data using C3NET(test).
+Description: This package allows inferring regulatory networks with direct physical interactions from expression data using C3NET.
 Maintainer: Gokmen Altay <altayscience@gmail.com>
 License: LGPL-3
 Depends: igraph 
