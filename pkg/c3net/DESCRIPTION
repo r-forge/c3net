@@ -1,0 +1,10 @@
+Package: c3net
+Version: 1.1.0
+Title: Infering large-scale gene networks with C3NET
+Date: 2010-10
+Author: Gokmen Altay, Frank Emmert-Streib
+Description: This package allows inferring regulatory networks with direct physical interactions from expression data using C3NET.
+Maintainer: Gokmen Altay <altayscience@gmail.com>
+License: LGPL-3
+Depends: R (>= 2.12), igraph 
+Packaged: 2010-10-31 13:28:48 UTC; altay01
