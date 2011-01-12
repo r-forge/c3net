@@ -1,8 +1,8 @@
 If you have the 
 
-c3net_1.0.0.tar.gz
+c3net_1.1.0.tar.gz
 
-then in command line, type the following to install c3net package
+then for linux in command line, type the following to install c3net package
 
  $  R CMD INSTALL c3net
 
