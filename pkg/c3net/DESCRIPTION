@@ -5,6 +5,6 @@ Date: 2011-01
 Author: Gokmen Altay, Frank Emmert-Streib
 Description: This package allows inferring gene regulatory networks with direct physical interactions from microarray expression data using C3NET.
 Maintainer: Gokmen Altay <altayscience@gmail.com>
-License: LGPL-3
+License: GPL (>=3)
 Depends: R (>= 2.12.1), igraph 
 
